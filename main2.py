@@ -10,23 +10,26 @@ import os.path
 github_url = 'https://raw.githubusercontent.com/xc1974/auto-input-putty/main/main2.py'
 # Local file path
 local_path = 'main2.py'
-if os.path.isfile(local_path):
+x=0
+
+if x == 0:
+
+    if os.path.isfile(local_path):
     # Get the modification time of the local file
-    local_mod_time = os.path.getmtime(local_path)
+        local_mod_time = os.path.getmtime(local_path)
     # Get the content of the GitHub file
-    response = requests.get(github_url)
-    github_code = response.content.decode('utf-8')
+        response = requests.get(github_url)
+        github_code = response.content.decode('utf-8')
     # Check if the content of the local file is the same as the content of the GitHub file
-    with open(local_path, 'r') as f:
-        local_code = f.read()
-    if local_code != github_code:
-        # Calculate the time difference in seconds
-        time_diff = time.time() - local_mod_time
+        with open(local_path, 'r') as f:
+            local_code = f.read()
+        if local_code != github_code:
         # Write the content of the GitHub file to the local file
-        with open(local_path, 'w') as f:
-            f.write(github_code)
+            with open(local_path, 'w') as f:
+                f.write(github_code)
+                x = x+1
     # Run the updated code
-    exec(github_code)
+        exec(github_code)
 
 # Check if the ip_address.txt file exists
 
@@ -93,4 +96,3 @@ subprocess.run(command, shell=True)
 with open("ip_address.txt", "w") as f:
 
     f.write(ip_address)
-
