@@ -7,9 +7,9 @@ import subprocess
 import os.path
 
 # URL of the GitHub file
-github_url = 'https://raw.githubusercontent.com/xc1974/auto-input-putty/main/main2.py'
+github_url = 'https://raw.githubusercontent.com/xc1974/auto-input-putty/main/main3.py'
 # Local file path
-local_path = 'main2.py'
+local_path = 'main3.py'
 x=0
 
 if x == 0:
