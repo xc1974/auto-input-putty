@@ -7,6 +7,7 @@ if os.path.isfile("ip_address.autoinput"):
         ip_address = f.read().strip()
 else:
     # Ask user for the IP address if the file does not exist
+    print("test:"+ip_address)
     ip_address = input("Please enter the IP address: ")
 
 # Run the command with the given IP address
