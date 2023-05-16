@@ -11,7 +11,7 @@ else:
     ip_address = input("Please enter the IP address: ")
 
 # Run the command with the given IP address
-command = f"putty.exe -ssh 192.158.1.{ip_address} -l pi -pw lkkcict306"
+command = f"putty.exe -ssh 192.168.1.{ip_address} -l pi -pw lkkcict306"
 subprocess.run(command, shell=True)
 print("debug:"+ip_address)
 print("if you see this message, you need to redownload it or you should contact me!")
